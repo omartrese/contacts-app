@@ -4,6 +4,8 @@ const path = require('path');
 
 const app = express();
 const port = 8000;
+const ip = 'localhost';
+
 
 app.engine('hbs', exphbs.engine({
     extname: '.hbs',
@@ -18,5 +20,5 @@ app.get('/', (req, res) => {
 
 });
 
-app.listen(8000);
+app.listen(port, ip);
 console.log(`listening on port ${port}`);
