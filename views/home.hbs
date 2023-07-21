@@ -11,7 +11,7 @@
 
     body {
       background-image: url(https://i.stack.imgur.com/jGlzr.png);
-      background-size: cover;
+      background-size: auto;
     }body::before{
       opacity: 0.6;
 
@@ -59,7 +59,7 @@
 
       <div id="buttons">
         <a class="btn btn-info btn-lg" href="#">LOGIN</a>
-        <a class="btn btn-primary btn-lg" href="#">SIGN UP</a>
+        <a class="btn btn-primary btn-lg" onsubmit="res.redirect('/signup')" href="/signup">SIGN UP</a>
       </div>
 
     </div>

@@ -1,0 +1,77 @@
+<head>
+  <meta charset="utf-8">
+  <title>Example App - Home</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url(https://i.stack.imgur.com/jGlzr.png);
+      background-size: auto;
+    }
+
+    #content
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    h1{font-size: 4em; font-family: 'Courier New', Courier, monospace; text-align: center; margin-left: 1.5em;}
+    a{font-size: 2.5em; font-family: 'Courier New', Courier, monospace; text-decoration: none; color: black; margin-right: 2em;} a:hover{text-decoration: none; color: rgb(22, 43, 43);}
+
+    header
+    {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.5em;
+    }
+
+    section
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10em;
+      margin-top: 10em;
+    }
+    section input 
+    {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2em;
+      font-size: 3em;
+      border-radius: 10px;
+      border-style: none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <header>
+        <div>
+            <h1>Contacts App</h1>
+        </div>
+        <div>
+            <a href="/">HOME</a>
+            <a href="/login">LOGIN</a>
+            <a href="/signup">SIGN UP</a>
+        </div>
+    </header>
+
+    <section>
+      <div>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>
