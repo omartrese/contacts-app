@@ -2,6 +2,7 @@
   <meta charset="utf-8">
   <title>Example App - Home</title>
   <style>
+        /* MOBILE STYLES */
     * {
       margin: 0;
       box-sizing: border-box;
@@ -19,56 +20,140 @@
       justify-content: space-around;
     }
 
-    h1{font-size: 4em; font-family: 'Courier New', Courier, monospace; text-align: center; margin-left: 1.5em;}
-    a{font-size: 2.5em; font-family: 'Courier New', Courier, monospace; text-decoration: none; color: black; margin-right: 2em;} a:hover{text-decoration: none; color: rgb(22, 43, 43);}
-
+    h1{font-size: 4em; font-family: 'Courier New', Courier, monospace; text-align: center;}
+    
     header
     {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-top: 1.5em;
-    }
-
+      justify-content: center;
+      flex-direction: column;
+      margin: 0;
+      margin-top: 2em;
+    } header nav{display: none;}
+    
     section
     {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10em;
-      margin-top: 10em;
+      flex-direction: column;
+      margin-top: 5em;
+    }
+    section h1
+    {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 1.3em;
     }
     section input 
     {
       display: flex;
       flex-direction: column;
       margin-bottom: 2em;
-      font-size: 3em;
+      font-size: 2.15em;
       border-radius: 10px;
       border-style: none;
     }
+    #auth-btn
+    {
+      display: flex;
+      padding: 0.5em;
+      font-size: 2em;
+      border-radius: 10px;
+    }
 
+     /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    
+    @media (min-width: 720px) 
+    { /*DESKTOP STYLES*/
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: url(https://i.stack.imgur.com/jGlzr.png);
+        background-size: auto;
+      }
+
+      #content
+      {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      h1{font-size: 4em; font-family: 'Courier New', Courier, monospace; text-align: center; margin-left: 1.5em;}
+      a{font-size: 2.5em; font-family: 'Courier New', Courier, monospace; text-decoration: none; color: black; margin-right: 1.5em;} a:hover{text-decoration: none; color: rgb(22, 43, 43);}
+
+      header
+      {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 1.5em;
+      } header nav{display: flex;}
+
+      section
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10em;
+        margin-top: 3em;
+      }
+      section h1
+      {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 5em;
+        padding-right: 2em;
+        margin-bottom: 1em;
+      }
+      section input 
+      {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
+        font-size: 3em;
+        border-radius: 10px;
+        border-style: none;
+      }
+
+    }
   </style>
+  <link rel="stylesheet" href="/styles/auth.css">
 </head>
 
 <body>
   <div id="content">
     <header>
         <div>
-            <h1>Contacts App</h1>
+            <h1>CONTACTS APP</h1>
         </div>
-        <div>
+        <nav>
             <a href="/">HOME</a>
             <a href="/login">LOGIN</a>
             <a href="/signup">SIGN UP</a>
-        </div>
+        </nav>
     </header>
 
     <section>
+      <div> 
+        <h1>Create account</h1>
+      </div>
       <div>
         <input type="text" placeholder="Username">
         <input type="password" placeholder="Password">
       </div>
+      
+      <button id="auth-btn" type="submit" class="btn btn-secondary btn-lg">Submit</button>
     </section>
 
   </div>
