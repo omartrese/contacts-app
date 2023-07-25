@@ -38,7 +38,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      margin-top: 5em;
+      margin-top: 7em;
     }
     section h1
     {
@@ -56,13 +56,20 @@
       border-radius: 10px;
       border-style: none;
     }
-    #auth-btn
+
+    section form
     {
       display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    #auth-btn
+    {
       padding: 0.5em;
       font-size: 2em;
       border-radius: 10px;
-    }
+    }  
 
      /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -105,7 +112,8 @@
         align-items: center;
         flex-direction: column;
         padding: 10em;
-        margin-top: 3em;
+        padding-top: 5em;
+        margin-top: 0em;
       }
       section h1
       {
@@ -125,6 +133,18 @@
         border-radius: 10px;
         border-style: none;
       }
+      section form
+      {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    
+      #auth-btn
+      {
+        font-size: 2em;
+        border-radius: 10px;
+      }  
 
     }
   </style>
@@ -139,8 +159,8 @@
         </div>
         <nav>
             <a href="/">HOME</a>
-            <a href="/login">LOGIN</a>
-            <a href="/signup">SIGN UP</a>
+            <a href="/auth/login">LOGIN</a>
+            <a href="/auth/signup">SIGN UP</a>
         </nav>
     </header>
 
@@ -148,12 +168,15 @@
       <div> 
         <h1>Create account</h1>
       </div>
-      <div>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-      </div>
-      
-      <button id="auth-btn" type="submit" class="btn btn-secondary btn-lg">Submit</button>
+      <form action="">
+        
+          <input type="text" placeholder="Username">
+          <input type="password" placeholder="Password">
+        
+
+          {{!-- <input type="submit" value="Submit" class="btn btn-secondary btn-lg"> --}}
+          <button id="auth-btn" class="btn btn-secondary btn-lg" >Submit</button>
+      </form>
     </section>
 
   </div>
