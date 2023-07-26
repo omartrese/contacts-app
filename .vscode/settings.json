@@ -9,11 +9,9 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "name": "myConnect",
-            "group": "nothing",
-            "database": "testDatabase",
-            "username": "root",
-            "askForPassword": true
+            "name": "contacts app",
+            "database": "contactsapp",
+            "username": "root"
         }
     ]
 }

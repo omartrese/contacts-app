@@ -4,7 +4,7 @@ const sqldb = sql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'mypassword',
-    database: 'testDatabase'
+    database: 'contactsapp'
 })
 
 sqldb.connect((error) => {
@@ -12,3 +12,5 @@ sqldb.connect((error) => {
 
     console.log("connected succesfully");
 })
+
+module.exports = sqldb;
