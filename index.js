@@ -26,3 +26,4 @@ app.use(require('./routes/auth.js'));
 
 app.listen(port);
 console.log(`listening on port ${port}`);
+console.log(`URL: localhost:${port}`);
