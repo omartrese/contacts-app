@@ -1,9 +1,21 @@
 const express = require('express');
+const router = express.Router();
 const bcrypt = require('bcrypt');
 const cookieParser = require('cookie-parser');
-const router = express.Router();
 const sql = require('./../db');
+
 let isAuth = false;
+let currentUser = null;
+
+function getCurrentUser()
+{
+    return currentUser;
+}
+
+function setCurrentUser(user)
+{
+    currentUser = user;
+}
 
 router.use(express.json());
 router.use(express.urlencoded({extended:true}));
@@ -16,30 +28,21 @@ router.get('/auth', (req, res) => res.redirect('/'));
 router.get('/auth/signup', (req, res) => res.render('signup'));
 
 router.post('/auth/signup', (req, res) => {
-    // res.send(req.body);
-    // res.send(req.params);
     const username = req.body.username;
     const password = req.body.password;
     const cryptedPass = bcrypt.hashSync(password, 8);
-    // const hashPassword = bcrypt.hash(password, );
-
-
-
-        
-        sql.query('INSERT INTO users SET ?', {username: username, password: cryptedPass}, async (error) => {
-            if(error){
-                res.status(500, {error: 'that username already exists'});
-                
-            } 
-
-            res.cookie('user', username);
-            console.log('Cookies: ', req.cookies);
-            console.log('Signed Cookies: ', req.signedCookies);
-
-            res.redirect('/auth');
-            });
-        
+    sql.query('INSERT INTO users SET ?', {username: username, password: cryptedPass}, async (error) => {
+        if(error){
+            res.status(500, {error: 'that username already exists'});
+            
+        } 
+        res.cookie('user', username);
+        console.log('Cookies: ', req.cookies);
+        console.log('Signed Cookies: ', req.signedCookies);
+        res.redirect('/auth');
     });
+        
+});
 
 
 router.get('/auth/login', (req, res) => res.render('login'));
@@ -62,14 +65,21 @@ router.post('/auth/login', (req, res) => {
             res.send('not valid data');
         } else 
         {
-            res.send('funciono, putaso');
-
             isAuth = true;
+            setCurrentUser(results[0]);
+            res.redirect('/contacts');
+
+            console.log(currentUser);
 
             console.log('Cookies: ', req.cookies);
             console.log('Signed Cookies: ', req.signedCookies);
+            
         }
     })
-}); 
+});
 
-module.exports = router;
+
+module.exports = {
+    router: router,
+    currentUser: getCurrentUser
+};

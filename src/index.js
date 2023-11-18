@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');       
 
-const home = require('./routes/index.js');
+// const home = require('./routes/index.js');
 
 const app = express();
 const port = 8000;
@@ -15,8 +15,9 @@ app.engine('hbs', exphbs.engine({
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'hbs');
 
-app.use(require('./routes/index.js'));
-app.use(require('./routes/auth.js'));
+app.use(require('./routes/main.js'));
+app.use(require('./routes/auth.js').router);
+app.use(require('./routes/userContacts.js'));
 
 // app.get('/', (req, res) => {
 //     // res.send("hello world");
