@@ -7,13 +7,13 @@ const path = require('path');
 const app = express();
 const port = 8000;
 
-
 app.engine('hbs', exphbs.engine({
     extname: '.hbs',
     defaultLayout: "main"
 }));
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'hbs');
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.use(require('./routes/main.js'));
 app.use(require('./routes/auth.js').router);
