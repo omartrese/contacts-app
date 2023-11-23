@@ -1,15 +1,12 @@
 const express = require('express');
 let currentUser = require('./auth').currentUser;
 const router = express.Router();
-let user;
-
-router.use(express.urlencoded());
+let user; 
 
 router.get('/contacts', (req, res) => {  
     
     if (currentUser) {
-        let user = currentUser();
-        setUserName(user);
+        user = currentUser();
         console.log("CURRENT USER= " + user.username);
         res.redirect(`/contacts/${user.username}`);
     } else {
@@ -18,14 +15,11 @@ router.get('/contacts', (req, res) => {
     }
   });
 
-router.get('/contacts/:user', (req, res) => {
-    res.send("lo conseguiste hijo de fruta");
+router.get('/contacts/:user', async (req, res) => {
+    // res.send("lo conseguiste hijo de fruta");
+    res.render('contacts', {username: user.username});
+    console.log(user);
 });
-
-function setUserName(user)
-{
-    this.user = user;
-}
 
 
 module.exports = router;
