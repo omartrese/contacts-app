@@ -34,7 +34,7 @@ router.post('/auth/signup', (req, res) => {
     sql.query('INSERT INTO users SET ?', {username: username, password: cryptedPass}, async (error) => {
         if(error){
             res.status(500, {error: 'that username already exists'});
-            
+            res.redirect('/auth/signup') 
         } 
         res.cookie('user', username);
         console.log('Cookies: ', req.cookies);

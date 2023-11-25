@@ -13,5 +13,6 @@
             "database": "contactsapp",
             "username": "root"
         }
-    ]
+    ],
+    "cmake.configureOnOpen": false
 }

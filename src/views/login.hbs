@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <title>Example App - Home</title>
-  <link rel="stylesheet" href="/styles/login.css">
+  <link rel="stylesheet" href="/styles/auth/login.css">
 </head>
 
 <body>
@@ -23,8 +23,8 @@
       </div>
       <form action="/auth/login" method="POST">
         
-          <input type="text" placeholder="Username" name="username" required>
-          <input type="password" placeholder="Password" name="password" required>
+          <input type="text" placeholder="Username" name="username" minlength="3" maxlength="15" required>
+          <input type="password" placeholder="Password" name="password" minlength="5" required>
         
 
           {{!-- <input type="submit" value="Submit" class="btn btn-secondary btn-lg"> --}}
