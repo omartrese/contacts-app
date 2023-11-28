@@ -27,25 +27,25 @@ header
 article
 {
     display: flex;
-    align-items: center;
     margin-top: 5em;
 }
 article .contact {
     background-color: white;
     border-radius: 3em;
     width: 160px;
-    height: 225px;
+    height: 245px;
     margin-left: 1.15em;
 }
 article .contact div
 {
     text-align: center;
 } article .contact div p {margin: 0; font-size: 1.5em; } 
-article .contact div #tlf {margin: 0; font-size: 1.25em; } 
+article .contact div #tlf { font-size: 1.25em; } 
 .userIcon
 {
     display: flex;
     justify-content: center;
     width: 10em;
     height: 10em;
+    margin: 0;
 }
