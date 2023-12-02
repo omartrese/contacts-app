@@ -1,7 +1,7 @@
 *
 {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0;  
 }
 
 a {text-decoration: none; color: black;} p {font-size: 2em;}
@@ -24,13 +24,18 @@ header
     margin-top: 2em;
 } header nav{display: none;}
 
+/*
+ALL THE CONTACT PAGE AND CONTACT CARD STYLES
+*/
 article
 {
     display: flex;
-    margin-top: 5em;
+    flex-wrap: wrap;
+    margin-top: 2em;
 }
 article .contact {
     background-color: white;
+    margin-top: 1.25em;
     border-radius: 3em;
     width: 160px;
     height: 245px;
@@ -41,11 +46,42 @@ article .contact div
     text-align: center;
 } article .contact div p {margin: 0; font-size: 1.5em; } 
 article .contact div #tlf { font-size: 1.25em; } 
-.userIcon
+article .contact .contactNav
 {
     display: flex;
     justify-content: center;
+}
+
+nav form button
+{
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+    border-style: solid;
+    border-radius: 3em;
+    opacity: 1;
+}
+nav form button:hover
+{
+    opacity: 0.8;
+}
+nav form button:focus
+{
+    opacity: 1;
+}
+
+
+/*
+    IMPORTED IMAGES STYLES
+*/
+    
+.userIcon
+{
+    display: flex;
     width: 10em;
     height: 10em;
-    margin: 0;
+}
+.editImg, .removeImg
+{
+    width: 20px;
+    height: 20px;
 }
