@@ -10,13 +10,16 @@
 <body>
     <header>
         <div>
-            <h1>CONTACTS APP</h1>
+            <a href="/">
+                <h1>CONTACTS APP</h1>
+            </a>
         </div>
         <nav>
             <a href="/">LOGOUT</a>
         </nav>
     </header>
 
+    {{!-- ARTICLE -> Esto es la zona de contactos, para poder ver todos y cada uno con sus nombres y números de teléfono  --}}
     <article>
         <div class="contact">
                     
@@ -84,10 +87,53 @@
                     </button>
                 </form>
             </nav>
-
-            
-
         </div> 
+
+
+        <div class="contact">            
+
+            <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="userIcon" class="userIcon">
+
+            <div>
+                <p>test1</p>
+                <p id="tlf">0123456789</p>
+            </div>
+
+            <nav class="contactNav">
+                <form action="" method="post">
+                    <button type="button">
+                        <img class="editImg" src="https://cdn.icon-icons.com/icons2/1875/PNG/512/editpencil_120034.png" alt="edit">
+                    </button>
+
+                    <button type="button">
+                        <img class="removeImg" src="https://cdn-icons-png.flaticon.com/512/1828/1828945.png" alt="edit">
+                    </button>
+                </form>
+            </nav>
+        </div>
+
+        <div class="contact">
+                    
+            <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="userIcon" class="userIcon">
+
+            <div>
+                <p>test1</p>
+                <p id="tlf">0123456789</p>
+            </div>
+
+            <nav class="contactNav">
+                <form action="" method="post">
+                    <button type="button">
+                        <img class="editImg" src="https://cdn.icon-icons.com/icons2/1875/PNG/512/editpencil_120034.png" alt="edit">
+                    </button>
+
+                    <button type="button">
+                        <img class="removeImg" src="https://cdn-icons-png.flaticon.com/512/1828/1828945.png" alt="edit">
+                    </button>
+                </form>
+            </nav>
+
+        </div>
 
                 <div class="contact">
                     
@@ -135,6 +181,17 @@
 
         </div>
     </article>
-</body>
+    
+    {{!-- FOOTER -> Aquí se puede encontrar diversa informacion de la página si estás en PC o un botón para añadir contacto si estás en móvil. Ambas opciones siempre estarán junto a un botón de LOGOUT para poder cerrar sesión cuando quieras --}}
+    <footer>
+        <nav>
+            <a href="#">LOGOUT</a>
 
+            <button type="button">
+
+                <img id="addContactImg" src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="addContact"> 
+            </button>
+        </nav>
+    </footer>
+</body>
 </html>
