@@ -29,9 +29,8 @@ router.get('/auth/signup', (req, res) => res.render('signup'));
 
 router.post('/auth/signup', (req, res) => {
     const username = req.body.username;
-    const password = req.body.password;
-    const cryptedPass = bcrypt.hashSync(password, 8);
-    sql.query('INSERT INTO users SET ?', {username: username, password: cryptedPass}, async (error) => {
+    const password = bcrypt.hashSync(req.body.password, 8);
+    sql.query('INSERT INTO users SET ?', {username: username, password: password}, async (error) => {
         if(error){
             res.status(500, {error: 'that username already exists'});
             res.redirect('/auth/signup') 
@@ -51,7 +50,8 @@ router.post('/auth/login', (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
     const cryptedPass = bcrypt.hash(password, 8); 
-  
+    req.body.password = null;    
+
     if(!username || !password)
     {
         res.send('COMPLETE LOS CAMPOS DEL FORMULARIO');
