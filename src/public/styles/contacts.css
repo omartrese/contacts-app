@@ -8,8 +8,8 @@ a {text-decoration: none; color: black;} p {font-size: 2em;}
 
 body
 {
- 
-   background-image: url(https://i.stack.imgur.com/jGlzr.png);
+    background-color: rgba(65, 62, 51, 0.845);
+   /* background-image: url(https://i.stack.imgur.com/jGlzr.png); */
    background-size: auto;
    overflow-x: hidden;
    position: relative;
@@ -70,6 +70,8 @@ nav form button:focus
 {
     opacity: 1;
 }
+.edit {background-color: yellowgreen; border-color: yellowgreen;}
+.remove {background-color: red; border-color: red}
 
 /*
     FOOTER STYLES
@@ -78,15 +80,17 @@ nav form button:focus
 footer
 {
     background-color: aliceblue;
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: end;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    
+    padding-bottom: auto;
+    bottom: 0;
+
 }
-footer nav
-{
-    margin-left: 2em;
-    margin-right: 2em; 
-}
+
 footer nav a
 {
     font-size: 2em;
@@ -99,16 +103,19 @@ footer nav a
     bottom: 0;
     left: 0;  
 }
-#addContact
+button#addContact
 {
     display: flex;
+    background-color: #04AA6D; /* Green */
+    border-color: #04AA6D; 
     margin-left: 0.25em;
-    margin-bottom: 0.75em;
+    margin-bottom: 3.5em;
     margin-right: 0;
     border-style: solid;
     width: 50px;
     height: 50px;
     border-radius: 3em;
+    
 }
 
 /*
