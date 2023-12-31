@@ -18,7 +18,7 @@ body {
   justify-content: space-around;
 }
 
-h1{font-size: 4em; font-family: 'Courier New', Courier, monospace; text-align: center;}
+h1{font-size: 3.5em; margin: auto 0; font-family: 'Courier New', Courier, monospace; text-align: center;}
 
 header
 {
@@ -37,7 +37,7 @@ section
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 7em;
+  margin-top: 3.5em;
 }
 section h1
 {
@@ -50,8 +50,8 @@ section input
 {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2em;
-  font-size: 2.15em;
+  margin-bottom: 2.5em;
+  font-size: 1.75em;
   border-radius: 10px;
   border-style: none;
 }
@@ -66,7 +66,7 @@ section form
 #auth-btn
 {
   padding: 0.5em;
-  font-size: 2em;
+  font-size: 1.5em;
   border-radius: 10px;
 }  
 
