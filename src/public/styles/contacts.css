@@ -9,10 +9,11 @@ a {text-decoration: none; color: black;} p {font-size: 2em;}
 body
 {
     background-color: rgba(65, 62, 51, 0.845);
-   /* background-image: url(https://i.stack.imgur.com/jGlzr.png); */
-   background-size: auto;
-   overflow-x: hidden;
-   position: relative;
+    /* background-image: url(https://i.stack.imgur.com/jGlzr.png); */
+    background-size: auto;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
 }
 
 header
@@ -34,13 +35,12 @@ article
     margin-bottom: 2em;
 }
 article .contact {
-    justify-content: space-between;
     background-color: white;
     margin-top: 1.25em;
     border-radius: 3em;
     width: 160px;
     height: 245px;
-    margin-left: 1.05em;
+    margin-left: auto;
     margin-right: auto;
 }
 article .contact div
@@ -79,16 +79,18 @@ nav form button:focus
 
 footer
 {
-    background-color: aliceblue;
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    width: 100%;
     position: absolute;
-
+    background-color: aliceblue;
+    margin: auto;   
+    width: 100%;
+    bottom: 0;
     margin-top: 3em;
 }
-
+footer div
+{
+    display: flex;
+    justify-content: space-around;
+}
 footer nav a
 {
     font-size: 2em;
@@ -107,7 +109,7 @@ button#addContact
     background-color: #04AA6D; /* Green */
     border-color: #04AA6D; 
     margin-left: 0.25em;
-    margin-bottom: 1em;
+    margin-bottom: 3.5em;
     margin-right: 0;
     border-style: solid;
     width: 50px;
@@ -136,5 +138,161 @@ button#addContact
     width: 38px;
     height: 38px;
     align-self: center;
+    
+}
 
+
+@media (min-width: 640px) /* DESKTOP STYLE */
+{
+    
+    *
+    {
+        box-sizing: border-box;
+        margin: 0;  
+    }
+    
+    a:hover {text-decoration: none; color: black; font-weight: bold;} p {font-size: 2em;}
+    
+
+    body
+    {
+        background-color: rgba(65, 62, 51, 0.845);
+        /* background-image: url(https://i.stack.imgur.com/jGlzr.png); */
+        background-size: auto;
+        overflow-x: hidden;
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    header
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 2em auto;
+    } header nav{display: flex; font-size: 2em;}
+    
+    /*
+    ALL THE CONTACT PAGE AND CONTACT CARD STYLES
+    */
+    article
+    {
+        display: flex;
+        flex-wrap: wrap;
+        
+        margin-bottom: 5em;
+    }
+    article .contact {
+        align-items: center;
+        background-color: white;
+        margin-top: 1.25em;
+        border-radius: 3em;
+        width: 230px;
+        height: 350px;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    article .contact div
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    } article .contact div p {margin: 0; font-size: 1.5em; } 
+    article .contact div #tlf { font-size: 1.25em; } 
+    article .contact .contactNav
+    {
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav form button
+    {
+        width: 2.75em;
+        height: 2.75em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        border-style: solid;
+        border-radius: 3em;
+        opacity: 1;
+    }
+    nav form button:hover
+    {
+        opacity: 0.8;
+    }
+    nav form button:focus
+    {
+        opacity: 1;
+    }
+    .edit {background-color: yellowgreen; border-color: yellowgreen;}
+    .remove {background-color: red; border-color: red}
+    
+    /*
+    FOOTER STYLES
+    */
+    
+    footer
+    {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background-color: aliceblue;
+        bottom: 0;
+    }
+    footer div
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2em;
+    }
+    footer nav a
+    {
+        display: none;
+    } footer h4 { margin: auto 0; font-size: 2em;}
+    
+    #addContact-form
+    {
+        display: flex;
+        position: sticky; 
+        bottom: 0;
+        left: 0;  
+    }
+    button#addContact
+    {
+        display: flex;
+        background-color: #04AA6D; /* Green */
+        border-color: #04AA6D; 
+        margin-left: 0.25em;
+        margin-bottom: 1em;
+        margin-right: 0;
+        border-style: solid;
+        width: 50px;
+        height: 50px;
+        border-radius: 3em;
+        
+    }
+    
+    /*
+    IMPORTED IMAGES STYLES
+    */
+    
+    .userIcon
+    {
+        display: flex;
+        width: 14em;
+        height: 14em;
+    }
+    .editImg, .removeImg
+    {
+        width: 32.5px;
+        height: 32.5px;
+    }
+    #addContactImg
+    {
+        width: 38px;
+        height: 38px;
+        align-self: center;
+        
+    }
 }
