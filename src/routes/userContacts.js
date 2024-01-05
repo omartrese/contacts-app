@@ -16,7 +16,7 @@ router.get('/contacts', (req, res) => {
     }
   });
 
-router.get('/contacts/:user', async (req, res) => {
+router.get('/contacts/:user', (req, res) => {
   console.log(user);
   // TODO --> Start doing the freaking contacts backend to end t his shitty project, I wanna do a Fucking videogame with Unity and Blender
   
@@ -26,6 +26,17 @@ router.get('/contacts/:user', async (req, res) => {
     res.render('contacts', {username: user.username, contacts: results});
     })
 });
+
+router.post('/contacts/:user', (req, res) => {
+  console.log(req.body)
+  res.redirect(`/contacts/${currentUser().username}`);
+  // TODO --> make this post request adds the contacts to the database
+})
+
+router.get('/contacts/:user/add', (req, res) => {
+  res.render('add', {username: currentUser().username});
+})
+
 
 
 module.exports = router;

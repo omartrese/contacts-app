@@ -63,6 +63,7 @@ router.post('/auth/login', (req, res) => {
         if(results.length === 0 || !(bcrypt.compareSync(password, results[0].password)))
         {
             res.send('not valid data');
+            isAuth = false;
         } else 
         {
             isAuth = true;

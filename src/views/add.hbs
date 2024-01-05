@@ -1,0 +1,21 @@
+
+
+    <link rel="stylesheet" href="/styles/addContactForm.css">
+<body>
+    <header>
+        <h1>
+            CONTACTS <br> APP
+        </h1>
+    </header>
+
+    <section>
+        <form action="/contacts/{{username}}" method="post">
+            <input type="text" name="name" id="" placeholder="name" maxlength="13" required>
+            <input type="tel" name="tlf" id="" placeholder="nº Tlf" maxlength="20" required>
+            <button type="submit">
+                Add
+            </button>
+        </form>
+    </section>
+</body>
+</html>

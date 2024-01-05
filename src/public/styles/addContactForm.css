@@ -1,0 +1,53 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body
+{
+    background-color: rgba(65, 62, 51, 0.845);
+    position: relative;
+    height: 100vh;
+}
+
+header {margin: 3em auto;}
+header h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+}
+
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section form {
+    display: flex;
+    flex-direction: column;
+} section form input {
+    margin-bottom: 2em;
+    font-size: 2em;
+    width: 10em;
+    height: 2em;
+    border-radius: 25px;
+    border-style: none;
+} section form button {
+    
+    margin: 2em auto;
+    width: 125px;
+    height: 110px;
+    background-color: #04AA6D; /* Green */
+    border-style: none;
+    border-radius: 50px;
+    font-size: 2em;
+}
+
+@media (min-width: 640px)
+{
+    header h1 { font-size: 4.5em; margin-bottom: 1.5em; }
+    section form input { font-size: 3em; }
+    section form button { margin: 0 auto; font-size: 3em; }
+}
