@@ -28,12 +28,10 @@
             </div>
 
             <nav class="contactNav">
-                <form action="" method="post">
-                    <button type="button" class="edit">
-                        <img class="editImg" src="https://cdn.icon-icons.com/icons2/1875/PNG/512/editpencil_120034.png" alt="edit">
-                    </button>
+                <form action="/contacts/delete/{{this.id}}" method="post">
 
-                    <button type="button" class="remove">
+
+                    <button type="submit" class="remove">
                         <img class="removeImg" src="https://cdn-icons-png.flaticon.com/512/1828/1828945.png" alt="remove">
                     </button>
                 </form>
@@ -42,8 +40,6 @@
         </div>
 
         {{/each}}
-
-
 
     </article>
     

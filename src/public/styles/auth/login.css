@@ -26,7 +26,6 @@ header
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0;
   margin-top: 2em;
 } header nav{display: none;}
 
@@ -91,8 +90,8 @@ section form
     justify-content: space-around;
   }
   
-  h1{font-size: 4em; font-family: 'Courier New', Courier, monospace; text-align: center; margin-left: 1.5em;}
-  a{font-size: 2.5em; font-family: 'Courier New', Courier, monospace; text-decoration: none; color: black; margin-right: 1.5em;} a:hover{text-decoration: none; color: rgb(22, 43, 43);}
+  h1{font-size: 3.75em; font-family: 'Courier New', Courier, monospace; text-align: center; margin-left: 1em;}
+  a{font-size: 2.25em; font-family: 'Courier New', Courier, monospace; text-decoration: none; color: black; margin-right: 1em;} a:hover{text-decoration: none; color: rgb(22, 43, 43);}
   
   header
   {
