@@ -7,4 +7,5 @@
 
 ## 3. Run the app
 `npm init`
+
 `npm run run`
