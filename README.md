@@ -10,6 +10,8 @@ HTML server-side rendering engine
 
 `npm init`
 
+`npm install`
+
 ## 2. Create the database and its tables
  ***Execute the `/database/db.sql` script***
 
