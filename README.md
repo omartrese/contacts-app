@@ -6,15 +6,17 @@ HTML server-side rendering engine
 # DEVELOPMENT SET-UP
 
 ## 1. Clone the project
-`cd contacts-app`
+```
+cd contacts-app
 
-`npm init`
+npm init -y
 
-`npm install`
+npm i
+```
 
 ## 2. Create the database and its tables
  ***Execute the `/database/db.sql` script***
 
-## 3. Run the app
+## 3. Run and test the app
 
 `npm run run`
