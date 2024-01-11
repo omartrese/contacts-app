@@ -7,10 +7,9 @@ HTML server-side rendering engine
 
 ## 1. Clone the project
 ```
+git clone https://github.com/omartrese/contacts-app.git
 cd contacts-app
-
 npm init -y
-
 npm i
 ```
 
