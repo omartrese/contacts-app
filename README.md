@@ -15,7 +15,10 @@ npm i
 ```
 
 ## 2. Create the database and its tables
- ***Execute the `/database/db.sql` script***
+
+ First you need to have already installed mySQL server and then configure the db credentials in `/src/db.js`.
+ 
+ Then execute or paste the SQL code from `/database/db.sql`
 
 ## 3. Run and test the app
 
